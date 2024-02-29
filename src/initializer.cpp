@@ -1,9 +1,10 @@
 //============================================================================
-// Name        : Test_IDE.cpp
+// Name        : Test_Eclipse IDE c/c++ codes
 // Author      : Valdecir Oliveira
 // Version     :
 // Copyright   : GPL3
-// Description : Hello World in C++, Ansi-style
+// Description : Hello C/C++, Ansi-style
+//			   : We gonna use thise base to call local libs class and functions
 //============================================================================
 
 #include <iostream>
