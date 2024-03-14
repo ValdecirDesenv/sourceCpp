@@ -4,16 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../myLibs/multiplyR.cpp \
-../myLibs/myCallendar.cpp 
+../myLibs/myCallendar.cpp \
+../myLibs/recursionUtils.cpp 
 
 CPP_DEPS += \
-./myLibs/multiplyR.d \
-./myLibs/myCallendar.d 
+./myLibs/myCallendar.d \
+./myLibs/recursionUtils.d 
 
 OBJS += \
-./myLibs/multiplyR.o \
-./myLibs/myCallendar.o 
+./myLibs/myCallendar.o \
+./myLibs/recursionUtils.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -28,7 +28,7 @@ myLibs/%.o: ../myLibs/%.cpp myLibs/subdir.mk
 clean: clean-myLibs
 
 clean-myLibs:
-	-$(RM) ./myLibs/multiplyR.d ./myLibs/multiplyR.o ./myLibs/myCallendar.d ./myLibs/myCallendar.o
+	-$(RM) ./myLibs/myCallendar.d ./myLibs/myCallendar.o ./myLibs/recursionUtils.d ./myLibs/recursionUtils.o
 
 .PHONY: clean-myLibs
 
