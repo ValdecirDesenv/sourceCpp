@@ -9,10 +9,18 @@
 
 #include <iostream>
 #include "myCallendar.h"
+#include "multiplyR.h"
 
 using namespace std;
 
+
+
+
 int main() {
+
+    int x = 5;
+    int y = 4;
+    printf("Product of %d and %d is: %d\n", x, y, multiply(x, y));
 	cout << "IDE COMPILER WORKS" << endl; // prints IDE COMPILER WORKS
 	myCallendar();
 	return 0;

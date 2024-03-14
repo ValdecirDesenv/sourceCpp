@@ -61,8 +61,11 @@ all: main-build
 # Main-build Target
 main-build: sourceCpp
 
+dependents:
+	-cd /home/vdc/eclipse-workspace/sourceCpp/Release && $(MAKE) all
+
 # Tool invocations
-sourceCpp: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+sourceCpp: $(OBJS) $(USER_OBJS) /home/vdc/eclipse-workspace/sourceCpp/Release/sourceCpp makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
 	g++  -o "sourceCpp" $(OBJS) $(USER_OBJS) $(LIBS)
@@ -75,5 +78,6 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents main-build
+/home/vdc/eclipse-workspace/sourceCpp/Release/sourceCpp:
 
 -include ../makefile.targets

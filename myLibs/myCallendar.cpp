@@ -16,7 +16,9 @@
 void myCallendar() {
     // Define a char variable to store the date
     char date = 0;
-    printf("sizeof char date %d \n",sizeof(date));
+    int x;
+    printf("sizeof int type %d bytes\n",sizeof(x));
+    printf("sizeof char type %d byte \n",sizeof(date));
     // Set the date to February 29, 2024
     int day = 29;    // 29th
     int month = 2;   // February

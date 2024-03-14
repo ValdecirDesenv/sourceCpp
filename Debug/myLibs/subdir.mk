@@ -4,12 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../myLibs/multiplyR.cpp \
 ../myLibs/myCallendar.cpp 
 
 CPP_DEPS += \
+./myLibs/multiplyR.d \
 ./myLibs/myCallendar.d 
 
 OBJS += \
+./myLibs/multiplyR.o \
 ./myLibs/myCallendar.o 
 
 
@@ -17,7 +20,7 @@ OBJS += \
 myLibs/%.o: ../myLibs/%.cpp myLibs/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -I"/home/vdc/dev/sourceCpp/myLibs" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	g++ -I"/home/vdc/eclipse-workspace/sourceCpp/myLibs" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
@@ -25,7 +28,7 @@ myLibs/%.o: ../myLibs/%.cpp myLibs/subdir.mk
 clean: clean-myLibs
 
 clean-myLibs:
-	-$(RM) ./myLibs/myCallendar.d ./myLibs/myCallendar.o
+	-$(RM) ./myLibs/multiplyR.d ./myLibs/multiplyR.o ./myLibs/myCallendar.d ./myLibs/myCallendar.o
 
 .PHONY: clean-myLibs
 

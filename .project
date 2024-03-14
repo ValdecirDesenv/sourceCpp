@@ -3,6 +3,7 @@
 	<name>sourceCpp</name>
 	<comment></comment>
 	<projects>
+		<project>sourceCpp</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

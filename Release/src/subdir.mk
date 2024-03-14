@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/Test_IDE.cpp 
+../src/sourceCpp.cpp 
 
 CPP_DEPS += \
-./src/Test_IDE.d 
+./src/sourceCpp.d 
 
 OBJS += \
-./src/Test_IDE.o 
+./src/sourceCpp.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -25,7 +25,7 @@ src/%.o: ../src/%.cpp src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/Test_IDE.d ./src/Test_IDE.o
+	-$(RM) ./src/sourceCpp.d ./src/sourceCpp.o
 
 .PHONY: clean-src
 
