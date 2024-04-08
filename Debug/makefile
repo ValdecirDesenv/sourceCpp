@@ -68,7 +68,7 @@ dependents:
 sourceCpp: $(OBJS) $(USER_OBJS) /home/vdc/eclipse-workspace/sourceCpp/Release/sourceCpp makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "sourceCpp" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/usr/src/linux-headers-6.5.0-26-generic/arch/riscv/include -o "sourceCpp" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
