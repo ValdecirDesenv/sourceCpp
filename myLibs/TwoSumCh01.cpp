@@ -35,6 +35,8 @@ Only one valid answer exists.
 
 #include <TwoSumCh01.h>
 #include <vector>
+#include <unordered_map>
+
 using namespace std;
 
 TwoSumCh01::TwoSumCh01() {
@@ -46,7 +48,16 @@ TwoSumCh01::~TwoSumCh01() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * Time Complexity: The time complexity of this implementation is O(n^2)
+ * where n is the size of the input vector nums. This is because it uses nested
+ * loops to iterate over the elements of nums.
+ * Space Complexity: The space complexity of this implementation is O(1),
+ * as it only uses a fixed-size vector index to store the result.*/
 
+/// @param nums
+/// @param target
+/// @return
 std::vector<int> TwoSumCh01::twoSum (std::vector<int>& nums, int target){
 	std::vector<int> index= {0,0};
 	int element,next = 0;
@@ -66,6 +77,25 @@ std::vector<int> TwoSumCh01::twoSum (std::vector<int>& nums, int target){
 	return index;
 
 }
+/*
+ * This implementation has a time complexity of O(n) and a
+ * space complexity of O(n), making it more efficient than the twoSum
+ * implementation for larger input sizes.
+ * */
+/// @param nums
+/// @param target
+/// @return
+std::vector<int> TwoSumCh01::twoSumEfficient (std::vector<int>& nums, int target) {
+    std::unordered_map<int, int> numMap; // Map to store number-index pairs
 
+    for (int i = 0; i < nums.size(); ++i) {
+        int complement = target - nums[i]; // Calculate the complement for current number
+        if (numMap.find(complement) != numMap.end()) { // If complement found in the map
+            return {numMap[complement], i}; // Return indices of complement and current number
+        }
+        numMap[nums[i]] = i; // Store the current number-index pair in the map
+    }
 
-
+    // If no solution found, return an empty vector
+    return {};
+}

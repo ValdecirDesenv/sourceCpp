@@ -15,6 +15,7 @@ public:
 	virtual ~TwoSumCh01();
 
 	std::vector<int> twoSum (std::vector<int>& nums, int target);
+	std::vector<int> twoSumEfficient (std::vector<int>& nums, int target);
 
 };
 

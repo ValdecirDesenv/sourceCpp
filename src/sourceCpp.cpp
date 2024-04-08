@@ -43,9 +43,10 @@ int main() {
     std::vector<int> index;
     TwoSumCh01 twoSumCh;
     index = twoSumCh.twoSum(nums,9);
+    cout <<"[ "<< index[0] <<" , " << index[1] <<" ]";
+
+    index = twoSumCh.twoSumEfficient(nums,9);
     cout<<"[ "<< index[0]<<" , " << index[1]<<" ]";
-
-
 
 	return 0;
 }
