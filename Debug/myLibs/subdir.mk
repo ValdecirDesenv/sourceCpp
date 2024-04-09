@@ -4,20 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../myLibs/Ch_arrays.cpp \
 ../myLibs/MergeAlternately.cpp \
-../myLibs/TwoSumCh01.cpp \
 ../myLibs/myCallendar.cpp \
 ../myLibs/recursionUtils.cpp 
 
 CPP_DEPS += \
+./myLibs/Ch_arrays.d \
 ./myLibs/MergeAlternately.d \
-./myLibs/TwoSumCh01.d \
 ./myLibs/myCallendar.d \
 ./myLibs/recursionUtils.d 
 
 OBJS += \
+./myLibs/Ch_arrays.o \
 ./myLibs/MergeAlternately.o \
-./myLibs/TwoSumCh01.o \
 ./myLibs/myCallendar.o \
 ./myLibs/recursionUtils.o 
 
@@ -34,7 +34,7 @@ myLibs/%.o: ../myLibs/%.cpp myLibs/subdir.mk
 clean: clean-myLibs
 
 clean-myLibs:
-	-$(RM) ./myLibs/MergeAlternately.d ./myLibs/MergeAlternately.o ./myLibs/TwoSumCh01.d ./myLibs/TwoSumCh01.o ./myLibs/myCallendar.d ./myLibs/myCallendar.o ./myLibs/recursionUtils.d ./myLibs/recursionUtils.o
+	-$(RM) ./myLibs/Ch_arrays.d ./myLibs/Ch_arrays.o ./myLibs/MergeAlternately.d ./myLibs/MergeAlternately.o ./myLibs/myCallendar.d ./myLibs/myCallendar.o ./myLibs/recursionUtils.d ./myLibs/recursionUtils.o
 
 .PHONY: clean-myLibs
 

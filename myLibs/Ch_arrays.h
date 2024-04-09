@@ -5,18 +5,20 @@
  *      Author: vdc
  */
 
-#ifndef TWOSUMCH01_H_
-#define TWOSUMCH01_H_
+#ifndef CH_ARRAYS_H_
+#define CH_ARRAYS_H_
 #include <vector>
 
-class TwoSumCh01 {
+class Ch_arrays {
 public:
-	TwoSumCh01();
-	virtual ~TwoSumCh01();
+	Ch_arrays();
+	virtual ~Ch_arrays();
 
 	std::vector<int> twoSum (std::vector<int>& nums, int target);
 	std::vector<int> twoSumEfficient (std::vector<int>& nums, int target);
+	int maxProfit(std::vector<int>& prices);
+	int maxProfitEfficient(std::vector<int>& prices);
 
 };
 
-#endif /* TWOSUMCH01_H_ */
+#endif /* CH_ARRAYS_H_ */

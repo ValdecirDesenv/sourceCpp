@@ -7,14 +7,14 @@
 //			   : We gonna use thise base to call local libs class and functions
 //============================================================================
 
+#include <Ch_arrays.h>
 #include <recursionUtils.h>
 #include <iostream>
 #include "myCallendar.h"
 #include "MergeAlternately.h"
-#include "TwoSumCh01.h"
 using namespace std;
 
-
+//TODO CREATE A BENCH TEST
 
 
 int main() {
@@ -39,14 +39,16 @@ int main() {
     merger.merge(str1, str2);
 
 // ---------------------------------------------------
-    std::vector<int> nums{15,7,11,2};
+    std::vector<int> nums{1,2};
     std::vector<int> index;
-    TwoSumCh01 twoSumCh;
-    index = twoSumCh.twoSum(nums,9);
-    cout <<"[ "<< index[0] <<" , " << index[1] <<" ]";
+    Ch_arrays challengesArray;
+//    index = challengesArray.twoSum(nums,9);
+//    cout <<"[ "<< index[0] <<" , " << index[1] <<" ]";
+//
+//    index = challengesArray.twoSumEfficient(nums,9);
+//    cout<<"[ "<< index[0]<<" , " << index[1]<<" ]";
 
-    index = twoSumCh.twoSumEfficient(nums,9);
-    cout<<"[ "<< index[0]<<" , " << index[1]<<" ]";
-
+    int dois = challengesArray.maxProfit(nums);
+    dois = challengesArray.maxProfitEfficient(nums);
 	return 0;
 }
